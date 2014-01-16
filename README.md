@@ -1,5 +1,7 @@
 This is the Google chrome extension to switch password type fields to text type fields
-======================================================================================
+
+Pass to text switcher
+=====================
 
 Sometomes there is need to use password field as a common text field (to fix some typo for example). This extension can do that.
 
