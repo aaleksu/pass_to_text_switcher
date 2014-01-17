@@ -6,8 +6,14 @@ chrome.browserAction.onClicked.addListener(function(tab){
                 'var formInputs=forms[i].getElementsByTagName("input");'+
                 'for(var j=0;j<formInputs.length;j++){'+
                   'if(formInputs[j].getAttribute("type")=="password"){'+
+                    'formInputs[j].setAttribute("was-secured", true);'+
                     'formInputs[j].setAttribute("type","text");'+
                   '}'+
+		  'else {' +
+		    'if(formInputs[j].getAttribute("was-secured") == "true") {' +
+		      'formInputs[j].setAttribute("type", "password");' + 
+		    '}' +
+		  '}' +
                 '}'+
               '}'
     });
